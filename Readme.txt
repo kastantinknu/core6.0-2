@@ -21,6 +21,11 @@ ENTRYPOINT ["dotnet", "zabolotnyi_zpi_zp_92_lab_kpi_3.dll"]
 save
 пересобрать
 dotnet restore
+
+Get-ExecutionPolicy
+Set-ExecutionPolicy Unrestricted -Force
+
+
 heroku login
 heroku container:login
 docker ps -a
@@ -34,3 +39,5 @@ docker push registry.heroku.com/zabolotnyi-zpi-zp-92-lab-kpi-3/web
 heroku container:release web -a=zabolotnyi-zpi-zp-92-lab-kpi-3
 
 heroku logs --tail -a=zabolotnyi-zpi-zp-92-lab-kpi-3
+
+Set-ExecutionPolicy Restricted -Force

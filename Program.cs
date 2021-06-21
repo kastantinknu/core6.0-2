@@ -21,7 +21,7 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    //webBuilder.UseUrls("http://*:" + Environment.GetEnvironmentVariable("PORT"));
+                    webBuilder.UseUrls("http://*:" + Environment.GetEnvironmentVariable("PORT"));
 
                 });
     }
