@@ -1,0 +1,35 @@
+﻿@model IEnumerable<zabolotnyi_zpi_zp_92_lab_kpi_3.Models.Player>
+
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport " content="width=device-width" />
+<title>Players</title>
+</head>
+<body>
+<h2>Here is the list of players</h2>
+<table>
+<thead>
+<tr>
+<th>Id</th>
+<th>Name</th>
+<th>Position</th>
+<th>RedCard</th>
+</tr>
+</thead>
+<tbody>
+@foreach ( zabolotnyi_zpi_zp_92_lab_kpi_3.Models.Player p in Model) {
+<tr>
+<td>@p.Id</td>
+<td>@p.Name</td>
+<td>@p.Position</td>
+<td>@p.RedCard</td>
+</tr>
+}
+</tbody>
+</table>
+</body>
+</html>

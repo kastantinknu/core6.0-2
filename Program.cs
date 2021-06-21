@@ -7,7 +7,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 
-namespace core6._0_2
+namespace zabolotnyi_zpi_zp_92_lab_kpi_3
 {
     public class Program
     {
@@ -21,7 +21,7 @@ namespace core6._0_2
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                    webBuilder.UseUrls("http://*:" + Environment.GetEnvironmentVariable("PORT"));
+                    //webBuilder.UseUrls("http://*:" + Environment.GetEnvironmentVariable("PORT"));
 
                 });
     }

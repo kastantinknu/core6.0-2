@@ -1,6 +1,6 @@
 using System;
 
-namespace core6._0_2.Models
+namespace zabolotnyi_zpi_zp_92_lab_kpi_3.Models
 {
     public class ErrorViewModel
     {

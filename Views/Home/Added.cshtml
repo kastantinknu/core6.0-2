@@ -1,0 +1,21 @@
+﻿@{
+    Layout = null;
+}
+<! DOCTYPE html>
+<html>
+<head>
+<meta name= "viewport" content="width=device-width" />
+<title>Thanks</title>
+</head>
+<body>
+<p>
+<hl>@Model.Name Added! </hl>
+@if (Model.RedCard==false) {
+@:Player can play! 
+} else {
+@:Player cannot play! 
+}
+</p>
+<p>Click <a asp-action="ListPlayers">here</a> to see who is added.</p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+﻿@model zabolotnyi_zpi_zp_92_lab_kpi_3.Models.Player
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport " content="width=device-width" />
+    <title>PlayerForm</title>
+    </head>
+        <body>
+<form asp-action="PlayerForm" method="post">
+<div asp-validation-summary="All"></div>
+<P>
+<label asp-for="Id">Id: </label>
+<input asp-for="Id" />
+</p>
+<P>
+<label asp-for="Name">Name:</label>
+<input asp-for="Name" />
+</p>
+
+<P>
+<label asp-for="Position">Position: </label>
+<input asp-for="Position" />
+</p>
+<P>
+<label>RedCard</label>
+<select asp-for="RedCard">
+<option value="">Choose an option</option>
+<option value="true">Yes</option>
+<option value="false">No</option>
+</select>
+</p>
+<button type="submit">Submit PlayerForm</button>
+</form>
+        </body>
+</html>

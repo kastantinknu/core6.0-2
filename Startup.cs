@@ -9,7 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
-namespace core6._0_2
+namespace zabolotnyi_zpi_zp_92_lab_kpi_3
 {
     public class Startup
     {
