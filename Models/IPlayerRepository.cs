@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using zabolotnyi_zpi_zp_92_lab_kpi_3.Models;
 
-namespace core6._0_2.Models
+namespace zabolotnyi_zpi_zp_92_lab_kpi_3.Models
 {
     interface IPlayerRepository
     {
