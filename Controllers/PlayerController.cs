@@ -15,7 +15,7 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3.Controllers
         {
             repository = repo;
         }
-
+        public ViewResult List() => View(repository.Players);
         //// GET: PlayerController
         //public ActionResult Index()
         //{
