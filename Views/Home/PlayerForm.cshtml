@@ -8,32 +8,42 @@
     <meta name="viewport " content="width=device-width" />
     <title>PlayerForm</title>
     <link rel="stylesheet" href ="/css/styles.css" />
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"/>
     </head>
         <body>
-<form asp-action="PlayerForm" method="post">
-<div asp-validation-summary="All"></div>
-<P>
-<label asp-for="Id">Id: </label>
-<input asp-for="Id" />
-</p>
-<P>
-<label asp-for="Name">Name:</label>
-<input asp-for="Name" />
-</p>
+            <div class="panel panel-success">
+                <div class="panel-heading text-center">PlayerForm</div>
+                <div class="panel-body">
 
-<P>
-<label asp-for="Position">Position: </label>
-<input asp-for="Position" />
-</p>
-<P>
-<label>RedCard</label>
-<select asp-for="RedCard">
-<option value="">Choose an option</option>
-<option value="true">Yes</option>
-<option value="false">No</option>
-</select>
-</p>
-<button type="submit">Submit PlayerForm</button>
-</form>
+                    <form class="p-a-l" asp-action="PlayerForm" method="post">
+                        <div asp-validation-summary="All"></div>
+                        <div class="form-group">
+                        <label asp-for="Id">Id: </label>
+                        <input class="form-control" asp-for="Id" />
+                        </div>
+                        <div class="form-group">
+                        <label asp-for="Name">Name:</label>
+                        <input class="form-control" asp-for="Name" />
+                        </div>
+
+                        <div class="form-group">
+                        <label asp-for="Position">Position: </label>
+                        <input class="form-control" asp-for="Position" />
+                        </div>
+                        <div class="form-group">
+                        <label>RedCard</label>
+                        <select class="form-control" asp-for="RedCard">
+                        <option value="">Choose an option</option>
+                        <option value="true">Yes</option>
+                        <option value="false">No</option>
+                        </select>
+                        </div>
+                         <div class="text-center">
+                        <button  class="btn btn-primary" type="submit">Submit PlayerForm</button>
+                        </div>
+
+                    </form>
+             </div>
+        </div>
         </body>
 </html>
