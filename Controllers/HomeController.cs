@@ -10,7 +10,10 @@ using zabolotnyi_zpi_zp_92_lab_kpi_3.Models;
 namespace zabolotnyi_zpi_zp_92_lab_kpi_3.Controllers
 {
     public class HomeController : Controller
-    {//
+    {
+    /// <summary>
+    /// /
+    /// </summary>
         //public string Index()
         //{
         //    return "Hello World";
