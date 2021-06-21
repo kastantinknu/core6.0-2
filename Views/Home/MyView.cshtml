@@ -7,15 +7,16 @@
         <head>
             <meta name="viewport " content="width=device-width" />
             <title>Index</title>
+            <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css"/>
         </head>
     <body>
 
- <div>Hello World (from the view)</div>
-         <div>@ViewBag.Greeting World (from the view) </div>
+ <div class="text-center">Hello World (from the view)</div>
+         <div  class="text-center">@ViewBag.Greeting World (from the view) </div>
 
          <p>We're going to have an exciting party.<br/>
         (To do: sell it better. Add pictures or something.)
         </p>
-    <a asp-action="PlayerForm">Add Players</a>
+    <a class="btn btn-primary" asp-action="PlayerForm">Add Players</a>
     </body>
 </html>
