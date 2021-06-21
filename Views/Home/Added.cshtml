@@ -5,9 +5,11 @@
 <html>
 <head>
 <meta name= "viewport" content="width=device-width" />
-<title>Thanks</title>
+<title>Added</title>
+   <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css"/>
+
 </head>
-<body>
+<body class="text-center">
 <p>
 <hl>@Model.Name Added! </hl>
 @if (Model.RedCard==false) {
@@ -16,6 +18,6 @@
 @:Player cannot play! 
 }
 </p>
-<p>Click <a asp-action="ListPlayers">here</a> to see who is added.</p>
+<p>Click <a class="nav-link" asp-action="ListPlayers">here</a> to see who is added.</p>
 </body>
 </html>
