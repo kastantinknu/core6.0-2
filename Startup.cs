@@ -26,7 +26,6 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3
         {
             services.AddControllersWithViews();
             services.AddMvc();
-            //MvcOptions.EnableEndpointRouting = false;
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -45,18 +44,23 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
-            app.UseMvc(routes => { });
+           // app.UseMvc(routes => { });
 
-            //app.UseRouting();
 
-            //app.UseAuthorization();
 
-            //app.UseEndpoints(endpoints =>
-            //{
-            //    endpoints.MapControllerRoute(
-            //        name: "default",
-            //        pattern: "{controller=Home}/{action=Index}/{id?}");
-            //});
+            //app.UseHttpsRedirection();
+            //app.UseStaticFiles();
+
+            app.UseRouting();
+
+            app.UseAuthorization();
+
+            app.UseEndpoints(endpoints =>
+            {
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
