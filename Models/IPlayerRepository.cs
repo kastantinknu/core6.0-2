@@ -6,7 +6,7 @@ using zabolotnyi_zpi_zp_92_lab_kpi_3.Models;
 
 namespace zabolotnyi_zpi_zp_92_lab_kpi_3.Models
 {
-    interface IPlayerRepository
+    public interface IPlayerRepository
     {
         IQueryable<Player> Players { get; }
     }
