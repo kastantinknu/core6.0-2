@@ -26,8 +26,12 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddTransient<IPlayerRepository, FakePlayerRepository>();
-            services.AddControllersWithViews();
-            services.AddMvc();
+          //  services.AddControllersWithViews();
+            services.AddMvcCore();
+            services.AddControllersWithViews(mvcOtions =>
+            {
+                mvcOtions.EnableEndpointRouting = false;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -46,7 +50,11 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3
             app.UseStatusCodePages();
             app.UseStaticFiles();
             app.UseHttpsRedirection();
-           // app.UseMvc(routes => { });
+            app.UseMvc(routes => {
+                routes.MapRoute(
+                    name: "default",
+                    template: "{controller=Product}/{action=List}/(id?}");
+            });
 
 
 
@@ -57,12 +65,12 @@ namespace zabolotnyi_zpi_zp_92_lab_kpi_3
 
             app.UseAuthorization();
 
-            app.UseEndpoints(endpoints =>
-            {
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
-            });
+            //app.UseEndpoints(endpoints =>
+            //{
+            //    endpoints.MapControllerRoute(
+            //        name: "default",
+            //        pattern: "{controller=Home}/{action=Index}/{id?}");
+            //});
         }
     }
 }
